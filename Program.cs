@@ -6,29 +6,30 @@ class Program
 {
     static void Main()
     {
-        // ArrayList arrayList = new ArrayList();
-        // arrayList.Add(1);
-        // arrayList.Add("Hei");
-        // arrayList.Add(3.14);
-        // arrayList.Add(true);
+        ArrayList arrayList = new ArrayList();
+        arrayList.Add(1);
+        arrayList.Add("Hei");
+        arrayList.Add(3.14);
+        arrayList.Add(true);
 
-        // foreach (var item in arrayList)
-        // {
-        //     Console.WriteLine(item);
-        // }
 
-        List<int> list = new List<int>();
-        list.Add(1);
-        list.Add(2);
-        list.Add(3);
+        List<int> list = new List<int> { 1, 1, 2, 3, 5 };
 
-        foreach (var item in list)
+        Console.WriteLine("Innhold i ArrayList:");
+        foreach (var item in arrayList)
         {
-            Console.WriteLine(item);
+            Console.WriteLine($"Verdi: {item}, Type: {item.GetType()}");
         }
 
-        // Console.WriteLine(x);
+        Console.WriteLine(new string('-', 30));
 
-        // int x = 5;
+        Console.WriteLine("Innhold i List<int>:");
+        foreach (var item in list)
+        {
+            Console.WriteLine($"Verdi: {item}");
+        }
+
+
+
     }
 }
